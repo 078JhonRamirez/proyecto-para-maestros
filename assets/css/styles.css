@@ -1,0 +1,293 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #e6ac70;
+    --secondary-color: #e6cb70;
+    --secondary-color-opacity: rgb(230 203 112 /0.2);
+    --tersary-color: #e69770;
+    --fourth-color: #1e2d40;
+    --fifth-color: #a69886;
+    --bgr-color: rgb(230 215 189 / 0.4);
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    background-color: var(--bgr-color);
+}
+
+header {
+    width: 100%;
+    height: 50px;
+    padding: 1em;
+    background-color: var(--primary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .nav {
+        width: max-content;
+        height: min-content;
+        .items__nav {
+            display: flex;
+            justify-content: space-around;
+            gap: 1em;
+            margin: 0;
+            padding: 0;
+
+            .item {
+                list-style: none;
+                a {
+                    text-decoration: none;
+                    font-size: 1.1rem;
+                    color: var(--fourth-color);
+                }
+            }
+        }
+    }
+}
+
+.main {
+    width: 85%;
+    padding: 2em;
+    margin: 2em auto;
+    border-radius: 10px;
+    box-shadow: 0 3px 30px var(--tersary-color);
+}
+
+.session__containt {
+    /* outline: 2px solid red; */
+    max-width: 100%;
+    padding: 10px;
+}
+
+.title__session {
+    margin: 0;
+    font-size: 5rem;
+    color: var(--fourth-color);
+    text-align: left;
+    font-weight: 400;
+}
+
+.title__session-size {
+    font-size: 2rem;
+}
+
+.text__important {
+    font-style: italic;
+    font-size: 3rem;
+    color: var(--fifth-color);
+    text-shadow: 2px 1px 2px var(--secondary-color);
+}
+
+.text {
+    text-align: left;
+    font-size: 1.1rem;
+}
+.article__content {
+    max-width: 100%;
+    padding: 0.7em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .title__article {
+        width: 100%;
+        font-size: 2.5em;
+        text-align: left;
+        color: var(--fifth-color);
+    }
+    .containe__card__article {
+        max-width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+}
+
+.card {
+    max-width: 300px;
+    height: 400px;
+    overflow: hidden;
+    box-shadow: 3px 3px 8px var(--fourth-color);
+
+    .header__card {
+        max-width: 100%;
+        max-height: 200px;
+        box-sizing: content-box;
+
+        .header__card-img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            /* aspect-ratio: 1/1; */
+        }
+    }
+
+    .card-description {
+        width: auto;
+        height: auto;
+        padding: 5px;
+
+        .card__subtitle {
+            margin: 8px 0;
+            font-size: 1.5rem;
+            text-align: left;
+            color: var(--secondary-color);
+        }
+
+        .text__card {
+            font-size: 1.1em;
+            text-align: left;
+        }
+    }
+
+    .footer__card {
+        padding: 0.5em;
+        text-align: right;
+        .text__foot {
+            font-size: 0.9rem;
+        }
+    }
+}
+
+.session__question {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    outline: 2px solid;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.content__contact {
+    background-color: var(--fourth-color);
+    height: 80px;
+    padding: 1em;
+
+    .subtitle {
+        margin: 0;
+        font-size: 2rem;
+        text-align: left;
+        color: var(--secondary-color);
+    }
+
+    .text-center {
+        max-width: 500px;
+        text-align: left;
+    }
+}
+
+.content__contact__form {
+    padding: 1em;
+
+    .form__contact {
+        position: relative;
+        padding: 3em 1em;
+        display: flex;
+        /* justify-content: center; */
+        align-items: center;
+        border-radius: 5px;
+        background-color: var(--secondary-color-opacity);
+    }
+
+    .form__input {
+        width: max-content;
+        height: max-content;
+        display: flex;
+        text-align: left;
+        align-items: baseline;
+        gap: 10px;
+    }
+
+    .form__input:nth-child(1) {
+        margin-top: 1em;
+        margin-bottom: 2em;
+    }
+
+    .form__input input {
+        width: 25em;
+        height: 2.8em;
+        margin-bottom: 8px;
+        border-radius: 10px;
+        border: 1px solid var(--fifth-color);
+        color: var(--fourth-color);
+    }
+
+    .form__input textarea {
+        width: 420px;
+        resize: none;
+        border: 1px solid var(--fifth-color);
+        border-radius: 5px;
+    }
+
+    .form__input input:focus,
+    .form__input textarea:focus {
+        outline: none;
+        border: 2px solid var(--tersary-color);
+        box-shadow: 1px 2px 5px var(--fifth-color);
+    }
+
+    .asunto {
+        margin-left: 2em;
+    }
+
+    .text__check {
+        margin: 0;
+    }
+
+    .accept__info {
+        margin-left: 30px;
+        width: 350px;
+
+        .text__check {
+            font-size: 0.8rem;
+        }
+    }
+    .accept__info .text__check:nth-last-child(1) {
+        display: inline;
+    }
+
+    .btn__contain {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        .btn-submit {
+            width: 500px;
+            height: 30px;
+            padding: 0.2em;
+            margin-left: 120px;
+            font-size: 1rem;
+            color: var(--fourth-color);
+
+            &:hover {
+                background-color: var(--primary-color);
+                color: #fff;
+                border: none;
+                box-shadow: 3px 2px 5px var(--secondary-color);
+                border-radius: 5px;
+                transform: scale(1.2);
+            }
+        }
+    }
+    .containt-img {
+        position: absolute;
+        left: 78%;
+        max-width: 100%;
+        height: 10em;
+        box-shadow: 3px 2px 5px var(--secondary-color);
+
+        &.containt-img img{
+            display: block;
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+    }
+}
